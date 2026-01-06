@@ -1,0 +1,11 @@
+{% extends "master.html" %}
+
+{% block title %} {{worker.fname}} {{worker.lname}} {% endblock %}
+
+{% block content %}
+<h1>Staff details</h1>
+<p>Full name: {{worker.fname}} {{worker.lname}}</p>
+<p>Phone: {{worker.phone}}</p>
+<p>City: {{worker.city}}</p>
+<p>Go back to <a href="/staff">staff list</a></p>
+{% endblock %}

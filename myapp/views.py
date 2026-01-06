@@ -10,4 +10,16 @@ def staff(request):
 		'workers':workers
 	}
 	return HttpResponse(template.render(context, request))
+
+def details(request, id):
+	worker = Workers.objects.get(id=id)
+	template = loader.get_template('details.html')
+	context = {
+		'worker': worker
+	}
+	return HttpResponse(template.render(context, request))
+
+def home(request):
+	template = loader.get_template('home.html')
+	return HttpResponse(template.render())
 # Create your views here.
